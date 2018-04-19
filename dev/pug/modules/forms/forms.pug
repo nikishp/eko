@@ -52,3 +52,80 @@ mixin form_default(formClass,formId)
                 animate(attributename='opacity', values='1;0', times='0;1', dur='1s', begin='0s', repeatcount='indefinite')
 
     .form__police
+
+
+mixin vis_form(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || ''
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    // Hidden Required Fields
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    // END Hidden Required Fields
+
+    .row
+      .col-md-4
+        .form__item
+          +svg('user')
+          input(type='text', required='', name='name', placeholder='Ваше имя')
+      .col-md-4
+        .form__item
+          +svg('phone')
+          input(type='tel', required='', class="phone" name='phone', placeholder='Ваш номер телефона')
+      .col-md-4
+        .form__item.form__item--btn
+          button(type='submit').btn.btn--blue Получить консультацию
+          .police * Мы не передаем Ваши контактные данные третьим лицам
+
+
+
+
+mixin recall(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || ''
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    // Hidden Required Fields
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    // END Hidden Required Fields
+    .row
+      .col
+        .form__title #{formTitle}
+    .row
+      .col-md-12
+        .form__item
+          +svg('user')
+          input(type='text', required='', name='name', placeholder='Ваше имя')
+      .col-md-12
+        .form__item
+          +svg('phone')
+          input(type='tel', required='', class="phone" name='phone', placeholder='Ваш номер телефона')
+      .col-md-12
+        .form__item.form__item--btn
+          button(type='submit').btn.btn--blue Заказать звонок
+          
+
+
+
+
+mixin download(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || ''
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    // Hidden Required Fields
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    // END Hidden Required Fields
+    .row
+      .col
+        .form__title #{formTitle}
+    .row
+      .col-md-12
+        .form__item
+          +svg('user')
+          input(type='text', required='', name='name', placeholder='Ваше имя')
+      .col-md-12
+        .form__item
+          +svg('phone')
+          input(type='tel', required='', class="phone" name='phone', placeholder='Ваш номер телефона')
+      .col-md-12
+        .form__item.form__item--btn
+          button(type='submit').btn.btn--blue Скачать
+          

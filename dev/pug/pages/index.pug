@@ -59,31 +59,232 @@ block content
       .row
         .col
           h2.h2 Какие дома мы отделываем?
-            span.h2__subtitle Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает широко
+            span.h2__subtitle Значимость этих проблем настолько очевидна, что постоянный количественный рост и<br> сфера нашей активности обеспечивает широко
+
+      .row.row--house
+        .col-lg-4.col-md-6
+          .house__item
+            .house__item__img
+              img(src="img/general/house_1.png", alt="image")
+            .house__item__title Рубленное и<br> оцилиндрованное бревно
+        .col-lg-4.col-md-6
+          .house__item
+            .house__item__img
+              img(src="img/general/house_2.png", alt="image")
+            .house__item__title Клеенный <br>и профилированный брус
+        .col-lg-4.col-md-6
+          .house__item
+            .house__item__img
+              img(src="img/general/house_3.png", alt="image")
+            .house__item__title Каркасная <br>технология
+              
+
+  section.consult.section
+    .container
+      .row
+        .col
+          h2.h2 Получите квалифицированную консультацию <br>от инженера компании
+            span.h2__subtitle Значимость этих проблем настолько очевидна, что постоянный количественный
+
+        .col-lg-12
+          .owner
+            .owner__img
+              img(src="img/content/owner.png", alt="image")
+            .owner__name Гапшин Дмитрий Витальевич
+            .owner__position Старший менеджер 
+      - formTitle = 'Получите квалифицированную консультацию от инженера компании'
+      +vis_form('','')
+
+  section.work.section
+    .container
+      .row
+        .col-lg-5
+          h2.h2 Делаем все отделочные работы
+          ul.work__list
+            li.work__item
+              +svg('dot')
+              | Шлифовка/покраска
+            li.work__item
+              +svg('dot')
+              | «Теплый шов» (герметизация)
+            li.work__item
+              +svg('dot')
+              | Конопатка
+            li.work__item
+              +svg('dot')
+              | Отделка крыши
+            li.work__item
+              +svg('dot')
+              | Отделка полов/потолков
+            li.work__item
+              +svg('dot')
+              | Обсадные короба/окосячка
+            li.work__item
+              +svg('dot')
+              | Устройство/отделка каркасных перегородок
+            li.work__item
+              +svg('dot')
+              | Установка окон и дверей
+            li.work__item
+              +svg('dot')
+              | Отделка фундамента
+            li.work__item
+              +svg('dot')
+              | Проектные работы
+            li.work__item 
+              +svg('dot')
+              | и другое...
+            li.work__item.work__item--btn
+              a.btn.btn--wh.popup-js(href="#prays") 
+                +svg("download")
+                | Скачать прайс-лист
+              .police * Мы не передаем Ваши контактные данные третьим лицам
 
 
+  section.photos.section
+    .container
+      .row
+        .col-lg-12
+          h2.h2 ФОТО Наших работ
+            span.h2__subtitle Значимость этих проблем настолько очевидна, что постоянный количественный рост и<br> сфера нашей активности обеспечивает широко
+          .slider-wrap
+            .slider
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_1.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_2.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_3.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_4.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_5.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_6.jpg", alt="image")
+              div
+                .slider__item
+                  .slider__item-height
+                  img(src="img/content/slider/slider_7.jpg", alt="image")
+    .slider-nav
+      div      
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_1.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_2.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_3.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_4.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_5.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_6.jpg", alt="image")
+          .slider-nav__item-mask
+      div          
+        .slider-nav__item
+          .slider__item-height
+          img(src="img/content/slider/slider_7.jpg", alt="image")
+          .slider-nav__item-mask
+
+  section.work-all.section
+    .container
+      .row
+        .col-lg-6
+          .work-all__img
+            img(src="img/content/work_all.png", alt="image")
+        .col-lg-6
+          h2.h2 Делаем все отдельные <br>работы
+          ul.work-all__list
+            li.work-all__item
+              +svg('ok')
+              | Соблюдение сроков
+            li.work-all__item
+              +svg('ok')
+              | Фиксация цены
+            li.work-all__item
+              +svg('ok')
+              | Соблюдение объемов работ
+            li.work-all__item
+              +svg('ok')
+              | Возможность рассрочки
+          .work-all__foot
+            a.btn.btn--blue.popup-js(href="#doc")
+              +svg('download') 
+              | Скачать пример договора
+            .police * Мы не передаем Ваши контактные данные третьим лицам
+
+  section.foot.section
+    .container
+      .row.row--foot
+        .col-lg-4
+          h2.h2 остались вопросы ? 
+          .foot__connect
+            +svg('marker')
+            .foot__connect-desc Наш офис находится по адресу:
+              b г. Нижний Новгород, ул Карла Маркса, 32
+          .foot__connect
+            +svg('mail')
+            .foot__connect-desc Email:
+              a(href="mailto:ecokubnn@mail.ru") ecokubnn@mail.ru
+          .foot__connect
+            +svg('phone')
+            .foot__connect-desc Телефон:
+              a(href="tel:88314103712") 8 (831) 410 37 12
+          .foot__pilice
+            a.btn.btn--blue.popup-js(href='#recall')
+              | Перезвоним за 24 сек. ЖМИ!
+            .police * Мы не передаем Ваши контактные данные третьим лицам
+          .foot_copyright © 2018 Экокуб. Все права защищены
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .col-lg-8
+          script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+          #YMapsID(class='map', style='width: 100%; height: 520px;')
+          script.
+            var myMap;
+            ymaps.ready(function () {
+            myMap = new ymaps.Map("YMapsID", {
+            center: [56.342436, 43.941972],
+            zoom: 17,
+            controls: []
+            });
+            var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            }, {
+            iconLayout: 'default#image',
+            //- iconImageHref: 'img/general/map_point.png',
+            //- iconImageSize: [30, 42],
+            //- iconImageOffset: [-5, -38]
+            })
+            myMap.geoObjects.add(myPlacemark); // Размещение геообъекта на карте.
+            });
 
 
 

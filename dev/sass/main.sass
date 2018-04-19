@@ -52,52 +52,67 @@
 
 .header
   position: relative
+
+  overflow: hidden
+
   padding-top: 30px
   padding-bottom: 60px
+
   color: $f
   background-image: url(../img/general/bg_top.jpg)
   background-repeat: no-repeat
   background-position: center 0
   background-size: cover
-  overflow: hidden
 
 .header__house
   position: absolute
   bottom: 0
   left: 0
+
   width: 100%
-  text-align: center
   // right: 0
+
   font-size: 0
   line-height: 0
+
+  text-align: center
   // background: red
+
   +md-block()
     display: none
   img
     transform: translateX(295px)
 .logo
   display: flex
+
   align-items: center
   +md-block()
     margin-bottom: 15px
 .logo__img
-  flex-shrink: 0
-  font-size: 0
   left: 0
+
+  font-size: 0
+
+  flex-shrink: 0
 .logo__slogan 
   margin-left: 25px
+
   font-size: 12px
-  +lh(18,12)
   font-style: italic
+
+  +lh(18,12)
   span
     display: block
+
     padding-top: 20px
     padding-bottom: 20px
     padding-left: 25px
+
     border-left: 1px solid
 
 .top-content
   display: flex
+
   justify-content: flex-end
   align-items: center
   +md-block()
@@ -106,12 +121,15 @@
     flex-direction: column
 .info-group
   display: flex
+
   +lg-block()
     flex-direction: column
 .info-group__item
   display: flex
-  align-items: center
+
   margin-right: 40px
+
+  align-items: center
   .svg
     +size(30)
     fill: #fff
@@ -120,6 +138,7 @@
       margin-bottom: 10px
 .info__ico
   margin-right: 10px
+
   font-size: 0
   line-height: 0
 
@@ -128,6 +147,7 @@
   font-weight: normal
   b,a
     display: block
+
     font-size: 18px
 
 
@@ -136,32 +156,37 @@
 
 .option
   padding-top: 15px
+
   font-size: 18px
   .svg
+    margin-right: 15px
+
     +size(30)
     flex-shrink: 0
-    margin-right: 15px
     fill: #fff
 
 .option__item
   display: flex
-  align-items: center
+
   margin-top: 15px
+
+  align-items: center
 
 
 
 .get-price 
   position: relative
+
   margin: 55px 0
   padding: 30px
   padding-right: 40%
-  font-size: 14px;
-  line-height: 1.571;
-  border-radius: 5px
+
+  font-size: 14px
+  line-height: 1.571
+
   border: 1px dashed #fff
-  b
-    font-size: 18px
-    font-weight: 900
+  border-radius: 5px
+
   +md-block()
     margin-right: 40px
     padding: 15px
@@ -169,20 +194,28 @@
   +xss-block()
     margin-right: 0
     padding: 15px
+  b
+    font-size: 18px
+    font-weight: 900
 .get-price__img
   position: absolute
   top: 0
   right: 0
+
   transform: translateX(50%) translateY(-24%)
+
   +md-block()
     transform: translateX(30px) translateY(-24%)
   +xss-block()
-    display: none  
+    display: none    
 .police
   margin-top: 10px
-  font-size: 12px;
-  color: rgb(255, 255, 255);
-  line-height: 1.167;
+
+  font-size: 12px
+  line-height: 1.167
+
+  color: rgb(255, 255, 255)
+
 
 
 .section
@@ -191,13 +224,317 @@
   background-image: url(../img/general/house_bg.jpg)
 
 
- 
+
+.row--house
+  justify-content: center
+.house__item
+  margin-top: 50px
+  text-align: center
+
+
+.house__item__img
+  display: inline-block
+  width: 198px
+  height: 198px
+  padding: 10px
+
+  border-width: 1px
+  border-style: solid
+  border-color: rgb(217, 217, 217)
+  border-radius: 50%
+  img
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    +object-fit(cover)
 
 
 
+.house__item__title
+  margin-top: 25px
+  font-size: 18px;
+  color: rgb(38, 38, 38);
+  line-height: 1.333;
+  font-weight: 700
 
 
+.owner
+  padding-top: 60px
+  text-align: center
+
+.owner__img
+  img
+    width: 180px;
+    height: 180px;
+    border-radius: 50%
+    +object-fit(cover)
+
+.owner__name
+  margin-top: 20px
+  font-size: 18px;
+  color: rgb(38, 38, 38);
+  line-height: 1.333;
+  font-weight: 700
+.owner__position 
+  margin-top: 10px
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+  line-height: 1.5;
+
+
+
+.form__item
+  position: relative
+  height: 56px
+  margin-top: 30px
+  font-size: 14px
+  color: rgb(179, 179, 179)
+  line-height: 1.5
+
+  input
+    display: block
+    width: 100%
+    height: 100%
+    padding-left: 55px
+    padding-right: 20px
+    border-width: 2px;
+    border-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-radius: 5px;
+
+  .svg
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 20px
+    +size(20)
+    fill: #3668a0
+    margin: auto
+    
+  .police
+    font-size: 12px
+    color: rgb(54, 104, 160);
+
+.form__item--btn
+  height: auto
+  // background: #000
+
+
+
+.work
+  color: #fff
+  background-image: url(../img/general/work_bg.jpg)
+  background-repeat: no-repeat
+  background-position: center bottom
+  background-size: cover
+  .h2
+    text-align: left
+    &::before
+      left: 0
+      right: auto
+
+
+.work__list
+  margin-top: 40px
+  padding: 40px
+  font-size: 18px;
+  line-height: 1
+  border: 1px dashed #fff
+  border-radius: 5px
+  +sm-block()
+    padding: 20px
+.work__item
+  display: flex
+  align-items: center
+  margin-bottom: 15px
+  &:not(:last-child)
+    .svg
+      +size(15)
+      flex-shrink: 0
+      margin-right: 10px
+      fill: #fff
+
+.work__item--btn
+  display: block
+  padding-top: 20px
+  color: $blue
+
+
+
+.photos
+  padding-bottom: 0
+
+.slider-wrap
+  position: relative
+  width: 100%
+  margin-top: 50px
+  margin-bottom: 30px
+  padding: 0 30px
+  
+
+.slider
+  max-width: 940px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  .slider__item
+    position: relative
+    font-size: 0
+    line-height: 0
+    border-radius: 5px;
+    overflow: hidden
+
+
+  .slider__item-height
+    padding-top: 66%
+  img
+    // display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +object-fit(cover)
+
+
+.slide-controll
+  position: absolute
+  top: 50%
+  z-index: 10
+  +size(30,30)
+  fill: $blue !important
+  cursor: pointer
+  transform: translateY(-50%)
+
+.slide-controll--prev
+  left: 0
+.slide-controll--next
+  right: 0
+
+
+.slick-list, .slick-slider
+  position: static;
+
+
+.slider-nav
+
+  .slider-nav__item
+    position: relative
+
+    .slider__item-height
+      padding-top: 66%
+
+    .slider-nav__item-mask,img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    img
+      +object-fit(cover)
+    .slider-nav__item-mask
+      transition: $tr
+      cursor: pointer
+      background: rgba(82, 131, 180, 0.5)
+
+  .slick-current
+    .slider-nav__item-mask
+      background: none
+      box-shadow: inset 0 0 0 4px #3668a0
 /* page style end */
+
+
+
+.work-all
+  background-image: url(../img/general/house_bg.jpg);
+  .h2
+    text-align: left
+    &::before
+      left: 0
+      right: auto
+
+
+.work-all__img
+  text-align: center
+
+
+
+.work-all__list
+  // background: grey
+  padding-top: 36px
+.work-all__item
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  font-size: 18px;
+  .svg
+    +size(20)
+    fill: $blue
+    margin-right: 10px
+
+
+.work-all__foot
+  max-width: 349px
+
+  .police
+    color: $blue
+
+.foot
+  .h2
+    margin-bottom: 50px
+    text-align: left
+    &::before
+      right: auto
+
+.foot__connect
+  display: flex
+  margin-bottom: 25px
+  .svg
+    +size(40)
+    flex-shrink: 0
+    margin-right: 15px
+    fill: $blue
+
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+
+
+  b,a
+    display: block
+    font-size: 18px
+    font-weight: 700
+    color: #000
+
+
+
+.foot_copyright
+  padding-top: 15px
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+
+
+.row--foot
+  +md-block()
+    flex-direction: column-reverse
+
+
+.pupup_form
+  position: relative
+  max-width: 440px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  padding: 20px
+  background: #fff
+  border-radius: 5px
+
+.form__title
+  font-size: 29px
+  text-align: center
+  padding-top: 15px
+  font-weight: 700
+
 
 /*media style*/
 @import "media"

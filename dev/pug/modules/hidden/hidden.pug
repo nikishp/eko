@@ -2,3 +2,9 @@ mixin hidden()
   .hidden
     - formTitle = 'Form Title'
     +form_default('formClass', 'formId')
+    - formTitle = 'Заказать обратный звонок'
+    +recall('pupup_form','recall')
+    - formTitle = 'Скачать прайс-лист'
+    +download('pupup_form','prays')
+    - formTitle = 'Скачать пример договора'
+    +download('pupup_form','doc')

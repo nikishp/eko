@@ -1,22 +1,26 @@
 body
   position: relative
+
   min-width: 300px
+  color: rgb(38, 38, 38)
   font-family: $baseFontFamily
   font-size: $baseFontSize+px
   font-weight: 300
-  color: $baseColor
   line-height: 1.2
+
+  color: $baseColor
   //line-height: 1.2 //if line height "auto" in Photoshop
 
 *::placeholder
-  color: inherit
-  opacity: 1
   transition: $tr
+
+  opacity: 1
+  color: inherit
 *:focus::placeholder
   opacity: 0
 *::selection
-  background-color: red
   color: #fff
+  background-color: red
  
 // body input:focus:required:invalid,
 // body textarea:focus:required:invalid
@@ -27,6 +31,7 @@ body
 
 *
   box-sizing: border-box
+
   outline: none !important
 
 //.clearfix
@@ -47,27 +52,32 @@ img
   max-width: 100%
   height: auto
 br
-  line-height: 0
   font-size: 0
+  line-height: 0
 a, input, button
-  text-decoration: none
-  color: inherit
-  outline: none
-  border: none
   box-sizing: border-box
+
+  text-decoration: none
+
+  color: inherit
+  border: none
+  outline: none
   background: transparent
   &:hover
-    outline: none
-    color: inherit
     text-decoration: none
+
+    color: inherit
+    outline: none
   &:focus
-    outline: none
-    color: inherit
     text-decoration: none
+
+    color: inherit
+    outline: none
   &:active
-    outline: none
-    color: inherit
     text-decoration: none
+
+    color: inherit
+    outline: none
 input,textarea
   border: 1px solid #000
 select
@@ -76,59 +86,76 @@ button
   cursor: pointer
 label
   cursor: pointer
-  user-select: none //запрещает выделения при клике
+  user-select: none  //запрещает выделения при клике
   //&:active
     //user-select: none //Подпись, выделяемая при клике извне
   &.error
     color: red
 textarea
-  resize: none //запрещает изменения размера мишью
-  outline: none
+  resize: none  //запрещает изменения размера мишью
+
   color: inherit
+  outline: none
 ul
-  list-style-type: none
   margin: 0
   padding: 0
+
+  list-style-type: none
 h1,h2,h3,h4,h5,h6
   margin: 0
+
   font-weight: normal
   line-height: 1
 .h1
-  font-size: 40px;
+  font-size: 40px
   font-weight: 900
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1.3
+
+  text-transform: uppercase
+
+  color: rgb(255, 255, 255)
+
   +xs-block()
     font-size: 35px
 .h2
   position: relative
+
   padding-top: 50px
-  font-size: 30px;
+
+  font-size: 30px
   font-weight: 900
-  color: rgb(38, 38, 38);
-  text-transform: uppercase;
   line-height: 1
-  text-align: center;
-  span
+
+  text-align: center
+  text-transform: uppercase
+
+  word-break: break-word
+  .h2__subtitle
     display: block
+
+    margin-top: 20px
+
+    font-size: 18px
     font-weight: normal
-    font-size: 18px;
-    color: rgb(38, 38, 38);
-    line-height: 1.333;
+    line-height: 1.333
+
     text-transform: initial
 
   &::before
-    content: ''
-    position: absolute;
+    position: absolute
     top: 0
-    left: 0
     right: 0
-    width: 100px;
-    height: 2px;
+    left: 0
+
+    width: 100px
+    height: 2px
     margin: auto
-    background-color: rgb(217, 217, 217);
-    // background-color: red
+
+    content: ''
+
+    background-color: rgb(217, 217, 217)
+
+  // background-color: red
 
 
 
@@ -141,45 +168,66 @@ h1,h2,h3,h4,h5,h6
 
 .btn
   display: inline-flex
-  justify-content: center
-  align-items: center
+
+  width: 100%
   min-width: 100px
   height: 56px
-  width: 100%
-  // background: lightgrey
-  border-radius: 5px;
+
   transition: $tr
+  // background: lightgrey
+
+  border-radius: 5px
+
+  justify-content: center
+  align-items: center
 .btn--empty
   border: 2px solid #fff
   &:hover
     background: rgba(255, 255, 255, 0.3)
 
 .btn--wh
-  font-size: 14px;
-  color: $blue
-  text-transform: uppercase;
+  font-size: 14px
   font-weight: 900
+
+  text-transform: uppercase
+
+  color: $blue
   background-color: $f
   .svg
-    +size(30)
     margin-right: 15px
+    +size(30)
     fill: $blue
-  &:hover
+  &:hover,&:active,&:focus
     color: $blue
-
+    background: darken( $f, 20%)
 
 .btn--top
   max-width: 200px
+
   +xss-block()
     margin-top: 20px
-  
+.btn--blue
+  font-size: 14px
+  font-weight: 900
+
+  text-transform: uppercase
+
+  color: rgb(255, 255, 255)
+  border-radius: 5px
+  background: rgb(54, 104, 160)
+  .svg
+    margin-right: 15px
+    +size(30)
+    fill: $f
+  &:hover,&:active,&:focus
+    color: #fff
+    background: darken(rgb(54, 104, 160),10%)
 
 
-
-
-
-
-
+.thank-page
+  .header
+    min-height: 800px
+    height: 100vh
 
 
 
@@ -189,14 +237,17 @@ h1,h2,h3,h4,h5,h6
 
 button[type='submit']
   .form-load
+    overflow: hidden
+
     width: 0
     height: 20px
-    line-height: 0
+
     font-size: 0
-    overflow: hidden
+    line-height: 0
     .lds-spinner
       width: 100%
       height: 100%
+
       fill: currentColor
 
 //.counter
@@ -233,13 +284,13 @@ button[type='submit']
     &:nth-child(1)
       &::after
         content: 'Days'
-    &:nth-child(2)
+      &:nth-child(2)
       &::after
         content: 'Hours'
-    &:nth-child(3)
+      &:nth-child(3)
       &::after
         content: 'Minutes'
-    &:nth-child(4)
+      &:nth-child(4)
       &::after
         content: 'Seconds'
 
