@@ -1,0 +1,203 @@
+/* lead-up style */
+//retina
+// https://github.com/strues/retinajs
+// для использования доставляем дата атрибут data-rjs="3", в бекграундах используем миксин
+// +retina('../img/general/', 3, cover, center center no-repeat)
+//@import "../libs/retina/_retina.sass"
+
+@import "smart-grid"
+@import "variabls"
+@import "mixin"
+@import "font"
+@import "sprite"
+//@include retina-sprites($retina-groups) //раскоменить для ретины
+@import "same_style"
+
+// @import "pixel-glass"
+
+/* lead-up style end */
+
+/* blocks style */
+
+/* head */
+@import "../pug/modules/header/header"
+
+/* foot */
+@import "../pug/modules/foot/foot"
+
+/* forms */
+@import "../pug/modules/forms/forms"
+
+/* menu */
+@import "../pug/modules/menu/menu"
+
+/* blocks style end*/
+
+
+//.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play
+  background-image: url('../img/general/fotorama.png')
+  background-repeat: no-repeat
+
+//smartgrid settings 
+// .container
+//   +container()
+// .row
+//   +row()
+// .col
+//   +col()
+//   +cols(12)
+
+/* page style */
+
+
+.header
+  position: relative
+  padding-top: 30px
+  padding-bottom: 60px
+  color: $f
+  background-image: url(../img/general/bg_top.jpg)
+  background-repeat: no-repeat
+  background-position: center 0
+  background-size: cover
+  overflow: hidden
+
+.header__house
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  text-align: center
+  // right: 0
+  font-size: 0
+  line-height: 0
+  // background: red
+  +md-block()
+    display: none
+  img
+    transform: translateX(295px)
+.logo
+  display: flex
+  align-items: center
+  +md-block()
+    margin-bottom: 15px
+.logo__img
+  flex-shrink: 0
+  font-size: 0
+  left: 0
+.logo__slogan 
+  margin-left: 25px
+  font-size: 12px
+  +lh(18,12)
+  font-style: italic
+  span
+    display: block
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 25px
+    border-left: 1px solid
+
+.top-content
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  +md-block()
+    justify-content: center
+  +xss-block()
+    flex-direction: column
+.info-group
+  display: flex
+  +lg-block()
+    flex-direction: column
+.info-group__item
+  display: flex
+  align-items: center
+  margin-right: 40px
+  .svg
+    +size(30)
+    fill: #fff
+  &:not(:last-child)
+    +lg-block()
+      margin-bottom: 10px
+.info__ico
+  margin-right: 10px
+  font-size: 0
+  line-height: 0
+
+.info__desc
+  font-size: 14px
+  font-weight: normal
+  b,a
+    display: block
+    font-size: 18px
+
+
+.row--toffs
+  margin-top: 120px
+
+.option
+  padding-top: 15px
+  font-size: 18px
+  .svg
+    +size(30)
+    flex-shrink: 0
+    margin-right: 15px
+    fill: #fff
+
+.option__item
+  display: flex
+  align-items: center
+  margin-top: 15px
+
+
+
+.get-price 
+  position: relative
+  margin: 55px 0
+  padding: 30px
+  padding-right: 40%
+  font-size: 14px;
+  line-height: 1.571;
+  border-radius: 5px
+  border: 1px dashed #fff
+  b
+    font-size: 18px
+    font-weight: 900
+  +md-block()
+    margin-right: 40px
+    padding: 15px
+    padding-right: 30%
+  +xss-block()
+    margin-right: 0
+    padding: 15px
+.get-price__img
+  position: absolute
+  top: 0
+  right: 0
+  transform: translateX(50%) translateY(-24%)
+  +md-block()
+    transform: translateX(30px) translateY(-24%)
+  +xss-block()
+    display: none  
+.police
+  margin-top: 10px
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  line-height: 1.167;
+
+
+.section
+  padding: 80px 0
+.house
+  background-image: url(../img/general/house_bg.jpg)
+
+
+ 
+
+
+
+
+
+/* page style end */
+
+/*media style*/
+@import "media"
